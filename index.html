@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eterniza Podcast — O casamento em voz e memória</title>
+    <meta
+      name="description"
+      content="Eterniza Podcast registra em áudio as emoções, histórias e memórias do seu casamento, em um episódio íntimo e cinematográfico."
+    />
+    <meta property="og:title" content="Eterniza Podcast" />
+    <meta
+      property="og:description"
+      content="Um podcast dentro do casamento para eternizar emoções pela voz."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <link rel="canonical" href="https://eternizapodcast.com/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Playfair Display"', "serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+            colors: {
+              soft: "#E5E5DF",
+              gold: "#FFFFFF",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="font-sans bg-[#F7F7F5] text-[#1A1A1A]">
+    <!-- NAV -->
+    <header
+      data-header
+      class="fixed top-0 inset-x-0 z-40 border-b border-[#E3E3DE] bg-[#F7F7F5]/95 backdrop-blur-md transition-all duration-300"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between md:justify-center gap-4"
+      >
+        <a href="#inicio" class="flex items-center gap-3">
+          <div
+            class="w-9 h-9 rounded-full border border-[#1A1A1A] flex items-center justify-center text-[10px] tracking-[0.22em] uppercase text-[#1A1A1A]"
+          >
+            EP
+          </div>
+          <div class="leading-tight">
+            <p
+              class="text-xs sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#1A1A1A]"
+            >
+              Eterniza Podcast
+            </p>
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <nav
+          class="hidden md:flex items-center justify-center gap-7 text-[11px] tracking-[0.26em] uppercase text-[#6B6B6B]"
+        >
+          <a
+            href="#inicio"
+            data-scroll
+            class="hover:text-[#1A1A1A] transition-colors duration-200"
+            >Início</a
+          >
+          <a
+            href="#o-que-e"
+            data-scroll
+            class="hover:text-[#1A1A1A] transition-colors duração-200"
+            >O projeto</a
+          >
+          <a
+            href="#como-funciona"
+            data-scroll
+            class="hover:text-[#1A1A1A] transition-colors duração-200"
+            >Como funciona</a
+          >
+          <a
+            href="#criadores"
+            data-scroll
+            class="hover:text-[#1A1A1A] transition-colors duração-200"
+            >Criadores</a
+          >
+          <a
+            href="#contato"
+            data-scroll
+            class="hover:text-[#1A1A1A] transition-colors duração-200"
+            >Contato</a
+          >
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          data-menu-toggle
+          class="inline-flex md:hidden items-center justify-center w-9 h-9 rounded-full border border-[#D0D0C8] bg-white/80 text-[#1A1A1A] hover:bg-[#F1EEE5] transition-colors"
+          aria-label="Abrir menu"
+        >
+          <span class="sr-only">Menu</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.6"
+            stroke="currentColor"
+            class="w-5 h-5"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile menu -->
+      <nav
+        data-menu
+        data-open="false"
+        class="md:hidden absolute inset-x-4 top-[3.1rem] origin-top bg-black/85 border border-white/20 rounded-3xl px-5 py-4 text-[11px] tracking-[0.26em] uppercase text-white/80 transform -translate-y-4 opacity-0 pointer-events-none transition-all duration-200 shadow-[0_18px_45px_rgba(0,0,0,0.35)]"
+      >
+        <div class="flex flex-col gap-3">
+          <a href="#inicio" data-scroll class="py-1.5 border-b border-white/10"
+            >Início</a
+          >
+          <a href="#o-que-e" data-scroll class="py-1.5 border-b border-white/10"
+            >O projeto</a
+          >
+          <a
+            href="#como-funciona"
+            data-scroll
+            class="py-1.5 border-b border-white/10"
+            >Como funciona</a
+          >
+          <a
+            href="#criadores"
+            data-scroll
+            class="py-1.5 border-b border-white/10"
+            >Criadores</a
+          >
+          <a href="#contato" data-scroll class="py-1.5">Contato</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="pt-24 md:pt-28">
+      <!-- SEÇÃO 1 – HERO CINEMATOGRÁFICO -->
+      <section
+        id="inicio"
+        class="hero relative flex items-center min-h-[100vh]"
+      >
+        <div class="hero-content w-full">
+          <div
+            class="max-w-5xl mx-auto px-4 py-16 md:py-24 flex flex-col gap-10"
+          >
+            <div class="space-y-8 fade-in">
+              <p
+                class="text-[11px] tracking-[0.32em] uppercase text-white/80 flex items-center gap-3"
+              >
+                <span
+                  class="inline-flex w-1.5 h-1.5 rounded-full bg-white"
+                ></span>
+                Capítulo 1 • A voz do casamento
+              </p>
+              <div class="space-y-4">
+                <h1
+                  class="font-display text-4xl sm:text-5xl lg:text-[3.4rem] leading-tight text-white"
+                >
+                  <span class="block">Eterniza Podcast</span>
+                  <span
+                    class="block text-lg sm:text-xl mt-2 text-soft/80 font-normal"
+                  >
+                    O casamento contado por quem faz parte dele
+                  </span>
+                </h1>
+                <p
+                  class="text-sm sm:text-base text-white/80 max-w-xl leading-relaxed"
+                >
+                  Uma experiência emocional para eternizar o seu grande dia.
+                </p>
+              </div>
+
+              <div class="flex flex-wrap gap-3">
+                <a
+                  href="#contato"
+                  data-scroll
+                  class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-white text-[#1A1A1A] text-[11px] tracking-[0.28em] uppercase font-semibold hover:bg-white/90 transition-colors duration-200 shadow-[0_20px_60px_rgba(0,0,0,0.65)]"
+                >
+                  Quero conhecer o projeto
+                </a>
+                <a
+                  href="#como-funciona"
+                  data-scroll
+                  class="inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-white/25 bg-white/10 backdrop-blur-sm text-[11px] tracking-[0.28em] uppercase text-soft/90 hover:border-white/70 hover:text-white transition-colors duração-200"
+                >
+                  Ver como funciona
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Indicador de scroll -->
+        <div class="scroll-indicator">
+          <span>Scroll</span>
+          <div class="scroll-indicator-dot"></div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 2 – O QUE É O ETERNIZA -->
+      <section
+        id="o-que-e"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="order-2 lg:order-1 space-y-6 fade-in">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 2 • O que é o Eterniza
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Um podcast dentro do casamento.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              O Eterniza Podcast é um podcast gravado dentro do casamento,
+              criado para registrar não apenas imagens, mas sentimentos,
+              histórias e pertencimento.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Não é sobre o evento.
+              <br />
+              É sobre as pessoas que constroem esse momento junto com vocês.
+            </p>
+          </div>
+          <div class="order-1 lg:order-2 fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
+            >
+              <img
+                src="img/conversadescontraida2.webp"
+                alt="Conversa descontraída entre convidados no mini estúdio do Eterniza Podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 3 – DIFERENCIAL EMOCIONAL -->
+      <section
+        id="diferencial-emocional"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[0.9fr,1.1fr] gap-12 items-center"
+        >
+          <div class="fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 3 • Diferencial emocional
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              O que a câmera não alcança.
+            </h2>
+            <div class="space-y-3 text-sm sm:text-base text-[#6B6B6B]">
+              <p>Fotógrafos congelam imagens.</p>
+              <p>Filmmakers contam a história do dia.</p>
+              <p>
+                O Eterniza Podcast captura a emoção pela voz. A risada, o choro
+                contido, a memória viva de quem ama vocês.
+              </p>
+              <p>É aquilo que a câmera não alcança.</p>
+            </div>
+          </div>
+          <div class="fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
+            >
+              <img
+                src="img/fotoemocao3.webp"
+                alt="Convidado emocionado falando ao microfone durante o casamento"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 4 – COMO FUNCIONA -->
+      <section
+        id="como-funciona"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 4 • Como funciona
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Um espaço discreto dentro da festa.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Durante o evento, montamos um espaço discreto e elegante.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Conversamos com pessoas escolhidas pelos noivos:
+            </p>
+            <ul
+              class="list-disc list-inside text-sm sm:text-base text-[#6B6B6B] space-y-1"
+            >
+              <li>Pais</li>
+              <li>Padrinhos</li>
+              <li>Amigos especiais</li>
+              <li>Pessoas importantes na história do casal</li>
+            </ul>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Sem roteiro.
+              <br />
+              Sem atuação.
+              <br />
+              A emoção vem da conversa.
+            </p>
+          </div>
+          <div class="fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
+            >
+              <img
+                src="img/momento4.webp"
+                alt="Espaço de podcast montado de forma discreta dentro do casamento"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 5 – PROFUNDIDADE DAS CONVERSAS -->
+      <section
+        id="profundidade"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="max-w-3xl fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 5 • Profundidade das conversas
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Histórias que talvez vocês nunca tenham ouvido.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Histórias que talvez vocês nunca tenham ouvido. Sentimentos que
+              muitas vezes não são ditos em público.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              É o casamento visto pelo coração de quem ama vocês.
+            </p>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 gap-6 items-stretch fade-in max-w-5xl"
+          >
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/fotoprojeto5.webp"
+                alt="Convidado compartilhando uma história profunda no microfone"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto55.webp"
+                alt="Detalhe de mãos entrelaçadas durante depoimento no podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 6 – RESULTADO FINAL -->
+      <section
+        id="resultado-final"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[1.05fr,0.95fr] gap-12 items-center"
+        >
+          <div class="fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 6 • Resultado final
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              O episódio que acompanha vocês pela vida toda.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Após o casamento, o casal recebe:
+            </p>
+            <ul
+              class="list-disc list-inside text-sm sm:text-base text-[#6B6B6B] space-y-1 max-w-xl"
+            >
+              <li>Episódio editado do Eterniza Podcast</li>
+              <li>Registro emocional e atemporal</li>
+              <li>Memória que pode ser ouvida por toda a vida</li>
+            </ul>
+          </div>
+          <div class="fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
+            >
+              <img
+                src="img/foto6.webp"
+                alt="Casal ouvindo emocionado o episódio do Eterniza Podcast após o casamento"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 7 – PARTICIPAÇÃO DOS CONVIDADOS -->
+      <section
+        id="participacao"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-2 gap-12 items-center"
+        >
+          <div class="order-2 lg:order-1 fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 7 • Participação dos convidados
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              O casamento visto por quem faz parte da história.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              O Eterniza envolve pessoas que fazem parte da história do casal.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Cada conversa revela memórias, histórias e afetos que constroem o
+              significado real do casamento.
+            </p>
+          </div>
+          <div class="order-1 lg:order-2 fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)]"
+            >
+              <img
+                src="img/foto7.webp"
+                alt="Convidados rindo e se emocionando enquanto participam do Eterniza Podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 8 – PROFISSIONALISMO TÉCNICO -->
+      <section
+        id="profissionalismo"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="max-w-3xl fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 8 • Profissionalismo técnico
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Técnica a serviço da emoção.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Equipamentos profissionais, captação de áudio limpa e edição
+              cuidadosa garantem qualidade e preservação emocional do conteúdo.
+            </p>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 gap-6 items-stretch fade-in max-w-5xl"
+          >
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto8.webp"
+                alt="Detalhe de equipamentos profissionais de áudio usados no Eterniza Podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto88.webp"
+                alt="Mesa de som e fones de ouvido preparados para gravação do podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 9 – BASTIDORES -->
+      <section
+        id="bastidores"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="max-w-3xl fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 9 • Bastidores
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Discreto, respeitoso e integrado ao dia.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              O Eterniza acontece de forma discreta e respeitosa, integrando-se
+              ao evento sem interferir na experiência dos convidados.
+            </p>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 gap-6 items-stretch fade-in max-w-5xl"
+          >
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto9.webp"
+                alt="Bastidores do Eterniza Podcast montado próximo à pista de dança"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto99.webp"
+                alt="Equipe do Eterniza ajustando equipamentos durante o casamento"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO 10 – RESULTADO EMOCIONAL -->
+      <section
+        id="resultado-emocional"
+        class="relative min-h-[80vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div class="max-w-6xl mx-auto px-4 space-y-10">
+          <div class="max-w-3xl fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo 10 • Resultado emocional
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              O brinde que fica para sempre.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              O casamento passa.
+              <br />
+              As fotos ficam.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Mas a emoção…
+              <br />
+              Essa a gente eterniza.
+            </p>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 gap-6 items-stretch fade-in max-w-5xl"
+          >
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/fotobrinde10encerramento.webp"
+                alt="Brinde emocional entre noivos e convidados durante o casamento"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_22px_70px_rgba(0,0,0,0.2)]"
+            >
+              <img
+                src="img/foto10101010.webp"
+                alt="Abraço emocionante registrado nos bastidores do Eterniza Podcast"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO EXTRA – CRIADORES DO PROJETO -->
+      <section
+        id="criadores"
+        class="relative min-h-[70vh] py-16 md:py-24 border-b border-[#E3E3DE]"
+      >
+        <div
+          class="max-w-6xl mx-auto px-4 grid lg:grid-cols-[0.9fr,1.1fr] gap-12 items-center"
+        >
+          <div class="fade-in">
+            <figure
+              class="relative rounded-[2rem] overflow-hidden border border-[#E0E0DB] bg-[#F0F0EB] shadow-[0_24px_80px_rgba(0,0,0,0.22)] max-w-md mx-auto lg:mx-0"
+            >
+              <img
+                src="img/rodolfofabio.webp"
+                alt="Retrato dos fundadores do Eterniza Podcast, Rodolfo e Fábio"
+                loading="lazy"
+                class="w-full h-full object-cover"
+              />
+            </figure>
+          </div>
+          <div class="fade-in space-y-6">
+            <p class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B]">
+              Capítulo extra • Criadores do projeto
+            </p>
+            <h2 class="font-display text-2xl sm:text-3xl text-[#1A1A1A]">
+              Quem está por trás do Eterniza.
+            </h2>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              O Eterniza nasceu da união entre audiovisual, narrativa emocional
+              e experiência em eventos.
+            </p>
+            <p class="text-sm sm:text-base text-[#6B6B6B] max-w-xl">
+              Criado por Rodolfo e Fábio, o projeto busca registrar memórias que
+              vão além da imagem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEÇÃO FINAL – CONTATO -->
+      <section id="contato" class="relative min-h-[70vh] py-16 md:py-24">
+        <div class="max-w-4xl mx-auto px-4 text-center space-y-8 fade-in">
+          <p
+            class="text-[11px] tracking-[0.32em] uppercase text-[#6B6B6B] mb-2"
+          >
+            Capítulo final • Contato
+          </p>
+          <h2
+            class="font-display text-2xl sm:text-3xl md:text-[2.1rem] leading-snug text-[#1A1A1A]"
+          >
+            Se a memória é o que fica,
+            <span class="block mt-1">
+              vamos eternizá-la da forma mais verdadeira possível.
+            </span>
+          </h2>
+          <p class="text-sm sm:text-base text-[#6B6B6B] max-w-2xl mx-auto">
+            Conte um pouco sobre o casamento, a data e a cidade. Respondemos com
+            cuidado, olhando para a história de vocês e para o que faz sentido
+            emocionalmente para o dia.
+          </p>
+
+          <div
+            class="flex flex-wrap items-center justify-center gap-4 mt-4 text-[11px] tracking-[0.28em] uppercase"
+          >
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-7 py-3 rounded-full bg-white text-[#1A1A1A] font-semibold hover:bg-white/90 transition-colors duration-200 shadow-[0_16px_45px_rgba(0,0,0,0.12)]"
+              aria-label="Conversar no WhatsApp"
+            >
+              WhatsApp
+            </a>
+            <a
+              href="#"
+              class="inline-flex items-center justify-center px-7 py-3 rounded-full border border-[#D0D0C8] text-[#1A1A1A] hover:bg-[#F1EEE5] transition-colors duração-200"
+              aria-label="Abrir Instagram do Eterniza Podcast"
+            >
+              Instagram
+            </a>
+            <a
+              href="mailto:contato@eternizapodcast.com"
+              class="inline-flex items-center justify-center px-7 py-3 rounded-full border border-[#D0D0C8] text-[#1A1A1A] hover:bg-[#F1EEE5] transition-colors duration-200"
+            >
+              E-mail
+            </a>
+            <a
+              href="https://www.youtube.com/@EternizaPodcast"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center px-7 py-3 rounded-full border border-[#D0D0C8] text-[#1A1A1A] hover:bg-[#F1EEE5] transition-colors duração-200"
+              aria-label="Abrir canal do Eterniza Podcast no YouTube"
+            >
+              YouTube
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#F7F7F5] border-t border-[#E3E3DE]">
+      <div
+        class="max-w-6xl mx-auto px-4 py-5 flex items-center justify-center text-center text-[11px] text-[#6B6B6B]"
+      >
+        <p>© 2026 Eterniza Podcast. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="js/script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+/* Estilos customizados para Eterniza Podcast (com Tailwind CDN)
+   - Paleta, animações e pequenos ajustes além das utilidades Tailwind
+*/
+
+:root {
+  --color-base: #f7f7f5; /* fundo off-white */
+  --color-gold: #ffffff; /* usado agora como branco para detalhes */
+  --color-white: #1a1a1a; /* texto principal */
+  --color-blue-dark: #0f172a; /* azul escuro/cinematográfico */
+  --color-blue-light: #38bdf8; /* azul claro (apoio, se necessário) */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-base);
+  color: var(--color-white);
+}
+
+/* NAVBAR SCROLL STATE */
+.header-scrolled {
+  background: rgba(247, 247, 245, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(16px);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../img/hero1.webp");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.28),
+    rgba(0, 0, 0, 0.55)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  bottom: 1.75rem;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(248, 250, 252, 0.75);
+  font-size: 0.7rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.scroll-indicator-dot {
+  width: 0.35rem;
+  height: 1.2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(248, 250, 252, 0.6);
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll-indicator-dot::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0.16rem;
+  top: 0.14rem;
+  height: 0.4rem;
+  border-radius: 999px;
+  background: var(--color-gold);
+  animation: scrollPulse 1.4s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(0.45rem);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0.45rem);
+    opacity: 0;
+  }
+}
+
+/* Fade-in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Carousel */
+.momentos-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.momentos-track {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  will-change: transform;
+}
+
+.momento-slide {
+  flex: 0 0 100%;
+}
+
+@media (min-width: 768px) {
+  .momento-slide {
+    flex: 0 0 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .momento-slide {
+    flex: 0 0 33.3333%;
+  }
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.85);
+  color: #f9fafb;
+  border: 1px solid rgba(250, 204, 21, 0.7);
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-btn:hover {
+  background: rgba(15, 23, 42, 1);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.97);
+}
+
+.carousel-btn--prev {
+  left: 0.9rem;
+}
+
+.carousel-btn--next {
+  right: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-btn {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  .carousel-btn--prev {
+    left: 0.4rem;
+  }
+  .carousel-btn--next {
+    right: 0.4rem;
+  }
+}
+
+/* Cards detalhes evento */
+.event-card {
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease,
+    border-color 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.55);
+  border-color: rgba(250, 204, 21, 0.7);
+}
+
+.event-card img {
+  transition: transform 0.6s ease;
+}
+
+.event-card:hover img {
+  transform: scale(1.06);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    background-attachment: scroll;
+  }
+}
