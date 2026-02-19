@@ -1,13 +1,12 @@
 /* Estilos customizados para Eterniza Podcast (com Tailwind CDN)
-   - Paleta, animações e pequenos ajustes além das utilidades Tailwind
 */
 
 :root {
-  --color-base: #f7f7f5; /* fundo off-white */
-  --color-gold: #ffffff; /* usado agora como branco para detalhes */
-  --color-white: #1a1a1a; /* texto principal */
-  --color-blue-dark: #0f172a; /* azul escuro/cinematográfico */
-  --color-blue-light: #38bdf8; /* azul claro (apoio, se necessário) */
+  --color-base: #f7f7f5;
+  --color-gold: #ffffff;
+  --color-white: #1a1a1a;
+  --color-blue-dark: #0f172a;
+  --color-blue-light: #38bdf8;
 }
 
 html {
@@ -17,9 +16,9 @@ html {
 body {
   background-color: var(--color-base);
   color: var(--color-white);
-}
+} 
 
-/* NAVBAR SCROLL STATE */
+/* NAVBAR */
 .header-scrolled {
   background: rgba(247, 247, 245, 0.96);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
@@ -30,7 +29,7 @@ body {
 .hero {
   position: relative;
   min-height: 100vh;
-  background-image: url("../img/hero1.webp");
+  background-image: url("../img/hero001.webp");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -103,7 +102,7 @@ body {
   }
 }
 
-/* Fade-in on scroll */
+/* Fade-in edit */
 .fade-in {
   opacity: 0;
   transform: translateY(24px);
@@ -117,7 +116,7 @@ body {
   transform: translateY(0);
 }
 
-/* Carousel */
+/* Carrosel  */
 .momentos-carousel {
   position: relative;
   overflow: hidden;

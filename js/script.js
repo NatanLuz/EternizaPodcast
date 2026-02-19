@@ -1,5 +1,3 @@
-
-
 // Utilidade para selecionar elementos
 const $ = (selector, scope = document) => scope.querySelector(selector);
 const $$ = (selector, scope = document) =>
